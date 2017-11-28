@@ -1,0 +1,71 @@
+body {
+	background-image: url("..//images/purple-blue.png")
+}
+
+h1 {
+	background-color: #18bc9c;
+	font-size: 30px;
+	color: #ffffff;
+	padding: 15px;
+	font-weight: bold;
+	width: 250px;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+.instructions {
+	width: 350px;
+	background-color: #f8fcfb; 
+	color: #18bc9c;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 15px;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+.container {
+	width: 600px;
+	height: 100px;
+}
+
+.guessthis {
+	float:left;
+	background-color: #d0c6d3;
+	color: #0f8f76;
+	width: 150px;
+	font-size: 22px;
+	font-weight: bold;
+	margin-left: 15px;
+	text-align: center;
+	padding: 5px;
+}
+.progress {
+	float:left;
+	background-color: #18bc9c;
+	color: #ffffff;
+	width: 100px;
+	margin-left: 15px;
+	padding: 20px 5px; 
+}
+
+.crystals {
+	float:none;
+	margin-left: 20px;
+}
+.crystalImg {
+	float:none;
+	margin-left: 10px;
+}
+
+.totalscore {
+	width: 270px;
+	background-color: #0f8f76;
+	color: #ffffff;
+	padding: 15px;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+
