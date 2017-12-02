@@ -1,71 +1,89 @@
 body {
-	background-image: url("..//images/purple-blue.png")
+	background-color: #b480c1;
 }
 
 h1 {
-	background-color: #18bc9c;
-	font-size: 30px;
+	background-color: #8d0837;
+	font-size: 55px;
+	font-family: 'Berkshire Swash', cursive;
 	color: #ffffff;
 	padding: 15px;
-	font-weight: bold;
-	width: 250px;
+	width: 450px;
 	margin-top: 10px;
-	margin-left: 15px;
+	margin-left: 50px;
 }
 
 .instructions {
-	width: 350px;
-	background-color: #f8fcfb; 
-	color: #18bc9c;
-	font-size: 16px;
+	width: 640px;
+	background-color: #e2c3f9; 
+	color: #4d184c;
+	font-size: 18px;
 	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 22px;
 	padding: 15px;
 	margin-top: 15px;
-	margin-left: 15px;
+	margin-left: 50px;
 	margin-bottom: 15px;
 }
 
 .container {
 	width: 600px;
-	height: 100px;
+	height: 120px;
 }
 
 .guessthis {
 	float:left;
-	background-color: #d0c6d3;
-	color: #0f8f76;
+	background-color: #4d184c;
+	color: #ffffff;
 	width: 150px;
-	font-size: 22px;
-	font-weight: bold;
-	margin-left: 15px;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 50px;
 	text-align: center;
-	padding: 5px;
+	padding: 15px;
 }
+
+.value {
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
 .progress {
 	float:left;
-	background-color: #18bc9c;
+	text-align: center;
+	background-color: #8d0837;
 	color: #ffffff;
-	width: 100px;
+	width: 160px;
+	font-size: 17px;
+	font-family: 'Open Sans', sans-serif;
 	margin-left: 15px;
-	padding: 20px 5px; 
+	padding: 15px 5px;
+}
+
+#status {
+	font-size: 20px;
 }
 
 .crystals {
 	float:none;
-	margin-left: 20px;
+	margin-left: 50px;
 }
 .crystalImg {
 	float:none;
-	margin-left: 10px;
+	margin-left: 15px;
+	width: 80px;
 }
 
 .totalscore {
-	width: 270px;
-	background-color: #0f8f76;
-	color: #ffffff;
-	padding: 15px;
-	margin-left: 10px;
+	width: 300px;
+	background-color: #e2c3f9;
+	color: #8d0837;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 12px;
+	margin-left: 50px;
 	margin-top: 10px;
-	font-size: 18px;
 }
 

@@ -11,29 +11,76 @@ $(document).ready(function() {
 	$("#loss").text("Losses: " + losses);
 
 // =========================================================================================================================
-	newCrystals();
+	numCrystals();
 	startGame();
 
 // FUNCTIONS
 
+	//Function to startgame
+	function startGame () {
+		//clears the score for number to match
+		totalScore = 0;
+		$(".totalscore").text("Your total score is: " + totalScore);
+
+		// function to generate random number to guess for player to match
+		function randomIntFromInterval(min,max) { 
+			return Math.floor(Math.random()*(max-min+1)+min);
+		} 
+
+		var numberToGuess = randomIntFromInterval(19,120);
+		//prints value of totalscore to html
+		$(".value").text(numberToGuess);
+
+		// when any crystal is clicked, update total score and display value as well. 
+		$('.crystalImg').on('click', function(){
+		    totalScore = totalScore + parseInt($(this).data('num'));
+
+			$(".totalscore").text("Your total score is: " + totalScore);
+			$("#status").empty();
+			// If total score equals number to guess, then increase wins and re-start game
+			if (totalScore == numberToGuess){
+				$("#status").text("YOU WON!!!");
+				wins++;
+				$("#wins").text("Wins: " + wins);
+				console.log(wins);
+				$(".crystals").empty();
+				numCrystals();
+				startGame();	
+			}
+
+			//else if total score is greater than number to guess, increase losses and also re-start game
+			else if (totalScore > numberToGuess){
+				$("#status").text("YOU LOST!");
+				losses++;
+				$("#losses").text("Losses: " + losses);
+				console.log(losses);
+				$(".crystals").empty();
+				numCrystals();
+				startGame();
+			}
+		})
+	}
+
 	// function to generate random numbers for each crystal
-	function newCrystals () {
+	function numCrystals () {
 		var numbers = [];
+		//while the amount of numbers generated if less than 4, continue to get more random numbers
 			while(numbers.length < 4) {
 				var ranNum = Math.ceil(Math.random()*12);
 				console.log(ranNum);
 
-				var found = false;
+				//if ranNum repeats, generate another number, so each crystal have different ran numbers
+				var numFound = false;
 				for (var i = 0; i < numbers.length; i++){
 					if (numbers[i] == ranNum){
-						found = true; break
+						numFound = true; break
 					}
 				}
-				if(!found)numbers[numbers.length]=ranNum;
+				if(!numFound)numbers[numbers.length]=ranNum;
 			}
 			console.log(numbers);
 
-			// Loop so the random numbers generated are match with a crystal image
+			// Loop to match random numbers generated with a crystal image
 			for (var i = 0; i < numbers.length; i++) {
 				var imgCrys = $('<img>');
 				imgCrys.attr({
@@ -44,50 +91,6 @@ $(document).ready(function() {
 				imgCrys.addClass('crystalImg');
 				$(".crystals").append(imgCrys);		
 			}
-	}
-
-
-	function startGame () {
-		totalScore = 0;
-		$(".totalscore").text("Your total score is: " + totalScore);
-
-		// function to generate random number to guess for player to match
-		function randomIntFromInterval(min,max) { 
-			return Math.floor(Math.random()*(max-min+1)+min);
-		} 
-
-		var numberToGuess = randomIntFromInterval(19,120);
-
-		$(".value").text(numberToGuess);
-
-		// when any crystal is clicked, update total score and display value as well. 
-		$('.crystalImg').on('click', function(){
-		    totalScore = totalScore + parseInt($(this).data('num'));
-
-			$(".totalscore").text("Your total score is: " + totalScore);
-
-			// If total score equals number to guess, then increase wins and re-start game
-			if (totalScore == numberToGuess){
-				$("#status").text("You won!!!");
-				wins++;
-				$("#wins").text("Wins: " + wins);
-				console.log(wins);
-				$(".crystals").empty();
-				newCrystals();
-				startGame();	
-			}
-
-			//else if total score is greater than number to guess, increase losses and also re-start game
-			else if (totalScore > numberToGuess){
-				$("#status").text("You lost!");
-				losses++;
-				$("#losses").text("Losses: " + losses);
-				console.log(losses);
-				$(".crystals").empty();
-				newCrystals();
-				startGame();
-			}
-		});
 	}
 
 })
