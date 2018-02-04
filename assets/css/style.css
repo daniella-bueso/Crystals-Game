@@ -1,89 +1,66 @@
 body {
-	background-color: #b480c1;
+	background-color: #d17076;
 }
-
-h1 {
-	background-color: #8d0837;
+.jumbotron {
+	background-color: #e2dad4;
+	margin-top: 10px;
+}
+h1{
 	font-size: 55px;
 	font-family: 'Berkshire Swash', cursive;
-	color: #ffffff;
-	padding: 15px;
-	width: 450px;
-	margin-top: 10px;
-	margin-left: 50px;
+	color:#22323f;
 }
+h2{
+	font-family: 'Berkshire Swash', cursive;
 
+}
 .instructions {
-	width: 640px;
-	background-color: #e2c3f9; 
-	color: #4d184c;
-	font-size: 18px;
+	color: #000c14;
+	font-size: 16px;
+	margin-bottom: 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+.guessthis {
+	background-color: #e2dad4;
+	color: #22323f;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+.value {
+	font-size: 22px;
 	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 22px;
-	padding: 15px;
-	margin-top: 15px;
-	margin-left: 50px;
-	margin-bottom: 15px;
 }
-
-.container {
-	width: 600px;
-	height: 120px;
-}
-
-.guessthis {
-	float:left;
-	background-color: #4d184c;
-	color: #ffffff;
-	width: 150px;
+.game-progress {
+	text-align: center;
+	background-color: #7a2a2c;
+	color: #e2dad4;
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
-	margin-left: 50px;
-	text-align: center;
-	padding: 15px;
+	margin-left: 5px;
+	margin-top:15px;
 }
-
-.value {
-	font-size: 24px;
-	font-family: 'Open Sans', sans-serif;
-}
-
-.progress {
-	float:left;
-	text-align: center;
-	background-color: #8d0837;
-	color: #ffffff;
-	width: 160px;
-	font-size: 17px;
-	font-family: 'Open Sans', sans-serif;
-	margin-left: 15px;
-	padding: 15px 5px;
-}
-
 #status {
-	font-size: 20px;
-}
-
-.crystals {
-	float:none;
-	margin-left: 50px;
+	font-size: 14px;
 }
 .crystalImg {
-	float:none;
 	margin-left: 15px;
 	width: 80px;
 }
 
 .totalscore {
-	width: 300px;
-	background-color: #e2c3f9;
-	color: #8d0837;
+	text-align:center;
+	background-color:#22323f;
+	color: #e2dad4;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 25px;
-	font-weight: bold;
-	padding: 12px;
-	margin-left: 50px;
-	margin-top: 10px;
+	font-size: 24px;
+	margin-top:10px;
+	padding: 10px;
+}
+.circle {
+	border-radius: 50%;
+	position:relative;
+	height: auto;
 }
 

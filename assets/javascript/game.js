@@ -1,14 +1,13 @@
 $(document).ready(function() {
 
 // Create global variables
-
 	crystals = ['assets/images/red.png','assets/images/blue.png','assets/images/yellow.png','assets/images/green.png'];
 
 	var totalScore = 0;
 	var wins = 0;
 	var losses = 0;
-	$("#win").text("Wins: " + wins);
-	$("#loss").text("Losses: " + losses);
+	$("#wins").text("Wins: " + wins);
+	$("#losses").text("Losses: " + losses);
 
 // =========================================================================================================================
 	numCrystals();

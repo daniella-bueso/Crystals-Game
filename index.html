@@ -8,53 +8,63 @@
 
 	<!-- CSS Links -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Open+Sans" rel="stylesheet">
 
 	<!-- jQuery Link -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <!-- Start of page -->
+    <div class="container">
+        <!-- Header -->
+        <div class="jumbotron text-center">
+			<h1> Crystals Collector</h1>       
+        </div>
 
-	<h1> Crystals Collector! </h1>
+        <!-- Instructions for Game -->
+        <div class="row">
+            <div class="instructions text-center col-md-8 col-md-offset-2">
+				<h2>Game Instructions</h2>
+                <p class="instructions"> You will be given a random number at the start of the game.</p>
+                <p class="instructions"> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p class="instructions"> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. </p>
+                <p class="instructions"> Each time the game starts, the game will change the values of each crystal.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+			<!-- Match this Number Section -->
+        	<div class="guessthis circle col-xs-12 col-sm-2">
+                <h3>Match this number
+                <br>
+                <span class="value"> </span></h3>
+			</div>
+			
+			<!-- Progress section -->
+			<div class="game-progress circle col-xs-12 col-sm-2">
+                <p id="status"> </p>
+                <p id="wins"> Wins: 0 </p>
+                <p id="losses">Losses: 0</p>   
+			</div>
 
-	<div class="instructions">
-		<p> You will be given a random number at the start of the game.</p>
-		<br>
-		<p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-		<br>
-		<p> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. </p>
-		<br>
-		<p> Each time the game starts, the game will change the values of each crystal.</p>
-	</div>
+			<!-- Crystal Images -->
+			<div class="crystals col-xs-12 col-md-5">
+			</div>
 
-	<div class="container">
-		<div class="guessthis">
-			<h3>Match this number! 
-				<br>
-				<span class="value"> </span></h3>
-		</div>	
-
-		<div class="progress">
-			<p id="status"> </p><br>
-			<p id="wins"> Wins: 0 </p>
-			<br>
-			<p id="losses">Losses: 0</p>
-		</div>	
-	</div>
-
-	<div class="crystals">
+			<!-- Total Score section -->
+			<div class="totalscore text-centercol-xs-12 col-sm-2"></div>
 		</div>
+    </div>
 
-	<div class="totalscore">
-		<h3> Your total score is </h3>
-	</div>
-
-	<!-- Javascript Link -->
+    <!-- Javascript Link -->
 	<script src="assets/javascript/game.js"></script>
 </body>
-
 </html>
