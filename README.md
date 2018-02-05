@@ -1,1 +1,5 @@
-# week-4-game
+# Crystals Game
+
+Fun interactive game with crystals that involves math! 
+
+![Crystals]("assets/images/crystals.png")
